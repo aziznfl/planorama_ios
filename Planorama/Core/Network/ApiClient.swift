@@ -6,6 +6,7 @@
 //
 
 import Alamofire
+import Combine
 import FirebaseAuth
 
 final class ApiClient {
@@ -13,9 +14,8 @@ final class ApiClient {
     
     private init() {}
 
-    // Public GET
     func get<T: Decodable>(
-        _ url: URLConvertible,
+        _ url: String,
         responseType: T.Type,
         parameters: Parameters? = nil,
         completion: @escaping (Result<T, Error>) -> Void
@@ -23,9 +23,8 @@ final class ApiClient {
         request(.get, url, responseType, parameters: parameters, completion: completion)
     }
 
-    // Public POST
     func post<T: Decodable>(
-        _ url: URLConvertible,
+        _ url: String,
         responseType: T.Type,
         parameters: Parameters? = nil,
         completion: @escaping (Result<T, Error>) -> Void
@@ -33,10 +32,11 @@ final class ApiClient {
         request(.post, url, responseType, parameters: parameters, completion: completion)
     }
 
-    // Private generic request
+    // MARK: - Private
+    
     private func request<T: Decodable>(
         _ method: HTTPMethod,
-        _ url: URLConvertible,
+        _ url: String,
         _ responseType: T.Type,
         parameters: Parameters? = nil,
         completion: @escaping (Result<T, Error>) -> Void
@@ -46,7 +46,6 @@ final class ApiClient {
                 completion(.failure(NSError(domain: "auth", code: 401, userInfo: [NSLocalizedDescriptionKey: "No valid token"])))
                 return
             }
-            print("token: \(token)")
 
             let headers: HTTPHeaders = [
                 "Authorization": "Bearer \(token)",
@@ -66,7 +65,7 @@ final class ApiClient {
             }
         }
     }
-
+    
     private func ensureValidToken(completion: @escaping (String?) -> Void) {
         guard let user = Auth.auth().currentUser else {
             completion(nil)

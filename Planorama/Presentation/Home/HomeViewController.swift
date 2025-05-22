@@ -5,6 +5,7 @@
 //  Created by Aziz Nurfalah on 10/05/25.
 //
 
+import Combine
 import SwiftUI
 import UIKit
 
@@ -16,20 +17,22 @@ class HomeViewController: UIViewController {
     
     private let tripViewModel = TripViewModel()
     private let accountDetailViewModel = AccountDetailViewModel()
+    private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         render()
         fetchData()
+        bindViewModel()
     }
+    
+    // MARK: - Private
     
     private func fetchData() {
         accountDetailViewModel.fetchData { [weak self] in
             self?.updateAccountDetail()
         }
-        tripViewModel.fetchTrips { [weak self] in
-            self?.updateViews()
-        }
+        tripViewModel.fetchTrips()
     }
     
     private func updateAccountDetail() {
@@ -40,8 +43,17 @@ class HomeViewController: UIViewController {
         accountDetailView.setup(imageUrl: account.avatarUrl, name: account.name, email: account.email)
     }
     
+    private func bindViewModel() {
+        tripViewModel.$trips
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.updateViews()
+            }
+            .store(in: &cancellables)
+    }
+    
     private func updateViews() {
-        let response = tripViewModel.tripsResponse
+        let response = tripViewModel.trips
         switch (response) {
         case .loading:
             emptyStateView.isHidden = true
@@ -55,11 +67,13 @@ class HomeViewController: UIViewController {
             emptyStateView.setup(title: error.localizedDescription) { [weak self] in
                 self?.fetchData()
             }
-        case .success(let trips):
+        case .success(let tripWraps):
             loadingView.isHidden = true
             emptyStateView.isHidden = true
             homeContentView.isHidden = false
-            homeContentView.setup(trips: trips)
+            homeContentView.setup(tripWraps: tripWraps) { [weak self] trip in
+                self?.onTapTripDetail(trip)
+            }
         case .idle:
             loadingView.isHidden = true
             emptyStateView.isHidden = true
@@ -67,7 +81,15 @@ class HomeViewController: UIViewController {
         }
     }
     
-    // MARK: Render
+    // MARK: - On Tap
+    
+    private func onTapTripDetail(_ trip: Trip) {
+        let detailVC = TripDetailViewController(tripId: trip.id)
+        detailVC.modalPresentationStyle = .fullScreen
+        present(detailVC, animated: true)
+    }
+    
+    // MARK: - Render
     
     private func render() {
         renderAccountDetail()

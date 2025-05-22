@@ -5,6 +5,9 @@
 //  Created by Aziz Nurfalah on 10/05/25.
 //
 
+import Combine
+
 protocol TripRepository {
-    func fetchTrips(completion: @escaping (Result<[Trip], Error>) -> Void)
+    func fetchTrips() -> AnyPublisher<BaseResponse<[TripWrap]>, Error>
+    func fetchTripDetailsBy(id: Int64) -> AnyPublisher<BaseResponse<TripDetails>, Error>
 }

@@ -5,6 +5,8 @@
 //  Created by Aziz Nurfalah on 10/05/25.
 //
 
+import Combine
+
 class FetchTripsUseCase {
     private let repository: TripRepository
     
@@ -12,7 +14,7 @@ class FetchTripsUseCase {
         self.repository = repository
     }
     
-    func execute(completion: @escaping (Result<[Trip], Error>) -> Void) {
-        repository.fetchTrips(completion: completion)
+    func execute() -> AnyPublisher<BaseResponse<[TripWrap]>, Error> {
+        repository.fetchTrips()
     }
 }

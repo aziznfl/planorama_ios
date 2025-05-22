@@ -103,7 +103,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2B204852-11B2-46DA-8439-2CB301276A05"
+            uuid = "1E2DB6B9-A220-425D-83D9-16CBB2A702EE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -112,23 +112,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "fetchTrips(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1E2DB6B9-A220-425D-83D9-16CBB2A702EE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Planorama/Data/Trip/TripService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "fetchTrips(completion:)"
+            landmarkName = "fetchTrips()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -151,93 +135,177 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FA76A1F3-E292-4F93-9B36-38B9EE5E8160"
-            shouldBeEnabled = "Yes"
+            uuid = "E5D91366-FC45-4F26-A798-F4F32D6E94A8"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Planorama/Core/Network/ApiClient.swift"
+            filePath = "Planorama/Presentation/Home/ViewModel/TripViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "request(_:_:_:parameters:completion:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchTrips()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FA76A1F3-E292-4F93-9B36-38B9EE5E8160 - 1d3f4f2f592b8442"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Planorama.ApiClient.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Alamofire.HTTPMethod, _: Alamofire.URLConvertible, _: &#x3c4;_0_0.Type, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Sendable&gt;&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Planorama.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aziznurfalah/Project/Personal/iOS/Planorama/Planorama/Core/Network/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65">
-               </Location>
-               <Location
-                  uuid = "FA76A1F3-E292-4F93-9B36-38B9EE5E8160 - 42d9db1ce0985a10"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.AFError) -&gt; Swift.Error in closure #1 @Sendable (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Planorama.ApiClient.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Alamofire.HTTPMethod, _: Alamofire.URLConvertible, _: &#x3c4;_0_0.Type, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Sendable&gt;&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Planorama.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aziznurfalah/Project/Personal/iOS/Planorama/Planorama/Core/Network/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4358E66C-57B7-473E-8A33-24A1A49B40E8"
-            shouldBeEnabled = "Yes"
+            uuid = "D537F0D8-71DA-4F31-A08E-09F5F8CC6E60"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Planorama/Data/Trip/TripService.swift"
+            filePath = "Planorama/Data/Trip/Model/Response/Trip.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "fetchTrips(completion:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "init(from:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4358E66C-57B7-473E-8A33-24A1A49B40E8 - 897efa4fea23e581"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Planorama.BaseResponse&lt;Swift.Array&lt;Planorama.Trip&gt;&gt;, Swift.Error&gt;) -&gt; () in Planorama.TripService.fetchTrips(completion: (Swift.Result&lt;Swift.Array&lt;Planorama.Trip&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Planorama.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aziznurfalah/Project/Personal/iOS/Planorama/Planorama/Data/Trip/TripService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27">
-               </Location>
-               <Location
-                  uuid = "4358E66C-57B7-473E-8A33-24A1A49B40E8 - 897efa4fea23e581"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Planorama.BaseResponse&lt;Swift.Array&lt;Planorama.Trip&gt;&gt;, Swift.Error&gt;) -&gt; () in Planorama.TripService.fetchTrips(completion: (Swift.Result&lt;Swift.Array&lt;Planorama.Trip&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Planorama.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aziznurfalah/Project/Personal/iOS/Planorama/Planorama/Data/Trip/TripService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27850C85-3128-4DD7-ADEA-C0C8465FF86F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Data/Trip/Model/Response/Trip.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84B32311-2E9D-47DA-8014-81AB67A71BFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Core/Extension/String.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "toDate"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E09D1D71-719D-4D53-B17F-5B75E28E5C86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "updateViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41B51402-B7FC-4BA5-A42D-E864D3625609"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Home/View/HomeContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A66BEC25-19BB-40E3-92EB-854A30B361AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "updateViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B03FBF03-DDD2-4613-B774-29733595AB08"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "updateViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21E172A1-2627-4D07-BBFC-88FB58A853D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "updateViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5ABD69E5-B28F-4B03-BC1B-ABF31D2C3826"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Detail/ViewCell/TripPlaceViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "render()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6ED057CD-F5A4-4239-A476-2F185E6CD019"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Planorama/Presentation/Detail/View/TripDetailContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "tableView(_:moveRowAt:to:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -5,25 +5,28 @@
 //  Created by Aziz Nurfalah on 10/05/25.
 //
 
+import Combine
 import Foundation
 
 class TripViewModel {
     private let fetchTripUseCase = FetchTripsUseCase()
     
-    var tripsResponse: ResultState<[Trip]> = .idle
+    @Published var trips: ResultState<[TripWrap]> = .idle
+    private var cancellables: Set<AnyCancellable> = []
     
-    func fetchTrips(completion: @escaping () -> Void) {
-        tripsResponse = .loading
-        fetchTripUseCase.execute { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let trips):
-                    self?.tripsResponse = .success(trips)
+    func fetchTrips() {
+        trips = .loading
+        fetchTripUseCase.execute()
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    break
                 case .failure(let error):
-                    self?.tripsResponse = .failure(error)
+                    self?.trips = .failure(error)
                 }
-                completion()
+            } receiveValue: { [weak self] trips in
+                self?.trips = .success(trips.data)
             }
-        }
+            .store(in: &cancellables)
     }
 }
